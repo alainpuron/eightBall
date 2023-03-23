@@ -1,0 +1,121 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+align-items: center;
+text-align: center;
+background: rgba(0, 128, 0, 0.331);
+}
+
+#ball {
+    position: relative;
+    border-radius: 50%;
+    width: 90vmin;
+    height: 90vmin;
+    overflow: hidden;
+    background: radial-gradient(circle at 30vmin 30vmin, #444, #000);
+    margin:0 auto;
+  margin-top: 30px;
+  }
+
+#innerBall{
+    position: absolute;
+    left: 22.5vmin;
+    top: 22.5vmin;
+    width: 45vmin;
+    height: 45vmin;
+    border-radius: 50%;
+    background: radial-gradient(#002, #001 18vmin, #666 18vmin, #000 18.5vmin, #000 22vmin, #666 22vmin, #000 22.5vmin);
+    display: none;
+
+}
+#triangle {
+    width: 0;
+    height: 0;
+    border: 100px solid transparent;
+    border-top: 0;
+    border-bottom: 200px solid blue;
+    margin: 0 auto;
+    margin-top: 40px ;
+
+    left: 22.5vmin;
+    top: 22.5vmin;
+    width: 0vmin;
+    height: 0vmin;
+  }
+
+#answer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: rgb(255, 255, 255);
+    animation-name: answerDisplay;
+    animation-duration: 3s;
+}
+
+@keyframes answerDisplay{
+  from {color: blue;}
+  to {color: white}
+}
+
+
+
+
+#white{
+    position: absolute;
+    left: 22.5vmin;
+    top: 22.5vmin;
+    width: 45vmin;
+    height: 45vmin;
+    border-radius: 50%;
+    background: white;
+
+}
+
+.eight {
+    left: 22.5vmin;
+    top: 22.5vmin;
+    width: 45vmin;
+    height: 45vmin;
+    border-radius: 50%;
+    background: #fff;
+    font-size: 27vmin;
+    font-family: sans-serif;
+    text-align: center;
+    line-height: 45vmin;
+    transition: opacity 1s;
+  }
+
+  @media only screen and (max-width: 600px) {
+    #triangle {
+      border: 50px solid transparent;
+      border-bottom: 100px solid blue;
+      margin-top: -30px;
+    }
+  }
+  @media only screen and (min-width: 370px) {
+    #triangle {
+      border: 50px solid transparent;
+      border-bottom: 100px solid blue;
+      margin-top: -25px;
+    }
+  }
+
+  @media only screen and (min-width: 700px) {
+    #triangle {
+      border: 100px solid transparent;
+      border-bottom: 200px solid blue;
+      margin-top: -60px;
+    }
+  }
+
+  @media only screen and (max-width: 599px ) {
+    #triangle {
+      border: 50px solid transparent;
+      border-bottom: 100px solid blue;
+      margin-top: -20px;
+
+    }
+  }
